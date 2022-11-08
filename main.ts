@@ -19,6 +19,9 @@ basic.showLeds(`
     . . . . .
     . . . . .
     `)
+let n = 0
 basic.forever(function () {
-	
+    serial.writeNumber(n)
+    n += 1
+    basic.pause(1000)
 })
